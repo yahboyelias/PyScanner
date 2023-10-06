@@ -78,5 +78,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - This tool utilizes the Scapy library for network scanning.
 - Special thanks to the Python community for creating and maintaining these amazing libraries.
-
-```
