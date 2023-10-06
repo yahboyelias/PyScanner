@@ -4,77 +4,85 @@ Python - Network Scanner
 ```markdown
 # Network Scanner
 
-Network Scanner is a Python-based command-line and GUI tool for scanning live hosts on a network and identifying open ports. It also supports service detection for common ports.
+A simple Python network scanner script that allows you to scan for live hosts, open ports, and identify common services running on those ports. You can run it in both command-line and graphical user interface (GUI) modes.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Command-Line Mode](#command-line-mode)
+  - [GUI Mode](#gui-mode)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
-- Scan for live hosts on a specified IP range or subnet.
+- Scan for live hosts in a specified IP range.
 - Scan for open ports on live hosts.
 - Identify common services running on open ports.
-- Multithreading support for faster scanning.
-- GUI mode for user-friendly interaction. (In Progress)
-- Save scan results to a CSV file.
+- Simple and user-friendly GUI mode.
+- Multithreaded scanning for faster results.
 
-## Prerequisites
+## Getting Started
 
-Before using the Network Scanner, ensure you have the following prerequisites installed:
+### Prerequisites
 
-- Python (3.7+ recommended)
-- Scapy library (`pip install scapy`)
-- Tkinter library (for GUI mode, included in Python standard library)
+Before you begin, ensure you have met the following requirements:
+
+- Python 3.x installed on your system.
+
+### Installation
+
+1. **Clone the Repository**:
+
+   Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/network-scanner.git
+   cd network-scanner
+   ```
+
+2. **Install Required Libraries**:
+
+   Run the following command to install the required libraries (excluding those that come with Python):
+
+   ```bash
+   pip install scapy
+   ```
+
+   This will install the `scapy` library.
 
 ## Usage
 
 ### Command-Line Mode
 
-To use the Network Scanner in command-line mode, run the following command:
+You can use the script in command-line mode to perform network scans. Here's how to use it:
 
 ```bash
-python main.py --target-ip <target_ip_range> --output-csv <output_csv_filename>
+python pyscanner.py --target-ip <target_ip_range> --output-csv <output_csv_filename>
 ```
 
-- `--target-ip`: Specify the target IP range or subnet in CIDR notation (e.g., '192.168.0.1/24').
-- `--output-csv`: (Optional) Specify the filename to save scan results to in CSV format.
-
-### Interactive Mode
-
-You can also run the Network Scanner in interactive mode by using:
-
-```bash
-python main.py --interactive
-```
-
-In interactive mode, you can choose options to scan for live hosts, open ports, or open ports with service detection.
+- Replace `<target_ip_range>` with the IP range you want to scan (e.g., '192.168.0.1/24').
+- Replace `<output_csv_filename>` with the desired filename for saving scan results in CSV format.
 
 ### GUI Mode
 
-To launch the GUI mode, use:
+The script also provides a GUI mode for a more user-friendly experience. To run the GUI mode, use the following command:
 
 ```bash
-python main.py --gui
+python pyscanner.py --gui
 ```
 
-The GUI allows you to input the target IP range and the number of threads for scanning.
+This will launch a graphical interface where you can input the target IP range and the number of threads for multithreaded scanning.
 
-## Examples
+## Contributing
 
-- Scan for live hosts and open ports:
-
-```bash
-python main.py --target-ip 192.168.0.1/24 --output-csv results.csv
-```
-
-- Launch the GUI mode:
-
-```bash
-python main.py --gui
-```
+Contributions are welcome! Please feel free to submit a pull request for any improvements or fixes.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- This tool utilizes the Scapy library for network scanning.
-- Special thanks to the Python community for creating and maintaining these amazing libraries.
+```
