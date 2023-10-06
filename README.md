@@ -149,5 +149,3 @@ A Python script for scanning networks to discover live hosts and open ports.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-Please replace `<target_ip_range>` and `<output_csv_filename>` with the appropriate values when instructing users to run the script.
